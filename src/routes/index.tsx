@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import waterfall from "@/assets/serene-forest-waterfall.jpg";
+import waterfallVideo from "@/assets/serene-forest-waterfall-loop.mp4.asset.json";
 import centerPortrait from "@/assets/photos/center-portrait.webp";
 import fullPhoto from "@/assets/photos/full-photo.webp";
 import photoThree from "@/assets/photos/img-20260826-134536.webp";
@@ -91,6 +92,16 @@ function Portfolio() {
 
   return (
     <main className="site-shell">
+      <video
+        className="waterfall-background"
+        src={waterfallVideo.url}
+        poster={waterfall}
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      />
       <div className="sun-orb" aria-hidden="true" />
       <div className="leaf-line leaf-line-one" aria-hidden="true"><Leaf size={54} /></div>
       <div className="leaf-line leaf-line-two" aria-hidden="true"><Flower2 size={38} /></div>
@@ -109,7 +120,6 @@ function Portfolio() {
         </div>
 
         <div className="photo-collage" aria-label="A collage of personal photographs in a serene forest">
-          <img className="nature-backdrop" src={waterfall} alt="A serene forest waterfall behind the photo collage" width={1536} height={1024} />
           <div className="collage-sticker sticker-one"><SunMedium size={20} /><span>good<br />days</span></div>
           <div className="collage-sticker sticker-two">from<br />my life</div>
           {photos.map((photo, index) => (
