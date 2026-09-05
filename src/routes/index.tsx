@@ -17,7 +17,7 @@ import {
 
 import waterfall from "@/assets/serene-forest-waterfall.jpg";
 import waterfallVideo from "@/assets/serene-forest-waterfall-loop.mp4.asset.json";
-import centerPortrait from "@/assets/main-photo-collage.png.asset.json";
+import centerPortrait from "@/assets/photos/center-portrait.webp";
 import fullPhoto from "@/assets/photos/full-photo.webp";
 import photoThree from "@/assets/photos/img-20260826-134536.webp";
 import photoFour from "@/assets/photos/img-20260816-183505.webp";
@@ -25,7 +25,7 @@ import photoFive from "@/assets/photos/img-20260815-093637.webp";
 import photoSix from "@/assets/photos/img-20260731-080053.webp";
 
 const photos = [
-  { src: centerPortrait.url, className: "photo-main" },
+  { src: centerPortrait, className: "photo-main" },
   { src: fullPhoto, className: "photo-tall" },
   { src: photoThree, className: "photo-small" },
   { src: photoFour, className: "photo-square" },
