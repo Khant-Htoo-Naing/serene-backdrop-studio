@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type CSSProperties } from "react";
 import {
   ArrowUpRight,
@@ -165,6 +165,13 @@ function Portfolio() {
             const item = panels[key];
             const Icon = item.icon;
             const isActive = activePanel === key;
+            if (key === "education") {
+              return (
+                <Link to="/education" className="nav-item" key={key}>
+                  <span className="nav-number">0{index + 1}</span><span>{item.eyebrow.split(" / ")[1]}</span><Icon size={17} className="nav-icon" /><ArrowUpRight size={17} className="arrow-icon" />
+                </Link>
+              );
+            }
             return (
               <button className={`nav-item ${isActive ? "is-active" : ""}`} key={key} onClick={() => setActivePanel(isActive ? null : key)} aria-expanded={isActive} aria-controls="section-detail-panel">
                 <span className="nav-number">0{index + 1}</span><span>{item.eyebrow.split(" / ")[1]}</span><Icon size={17} className="nav-icon" /><ArrowUpRight size={17} className="arrow-icon" />
