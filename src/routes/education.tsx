@@ -5,7 +5,7 @@ import trophies from "@/assets/trophies.jpg.asset.json";
 import englishImg from "@/assets/edu/english.jpg";
 import singingImg from "@/assets/edu/singing.jpg";
 import guitarImg from "@/assets/edu/guitar.jpg";
-import distinctionsImg from "@/assets/edu/distinctions.jpg";
+import distinctionsImg from "@/assets/edu/distinctions-certificate.png.asset.json";
 import medicalImg from "@/assets/edu/medical.jpg";
 
 const items = [
@@ -29,7 +29,7 @@ const items = [
   },
   {
     icon: Award,
-    image: distinctionsImg,
+    image: distinctionsImg.url,
     title: "6 distinctions",
     text: "Six subject distinctions earned through steady, disciplined study.",
   },
