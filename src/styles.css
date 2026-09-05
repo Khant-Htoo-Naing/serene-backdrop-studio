@@ -98,7 +98,7 @@ button { cursor: pointer; }
 .facts-grid strong { font-size: 13px; font-weight: 600; color: var(--cream); }
 .family-note { color: oklch(0.8 0.04 164); font-size: 11px; line-height: 1.5; margin: 0; font-weight: 600; }
 .section-nav { margin-top: 47px; border-top: 1px solid oklch(0.98 0.018 86 / 24%); position: relative; z-index: 2; }
-.nav-item { width: 100%; display: grid; grid-template-columns: 36px 1fr 26px 20px; align-items: center; border: 0; border-bottom: 1px solid oklch(0.98 0.018 86 / 24%); color: var(--cream); background: transparent; padding: 15px 0; text-align: left; text-transform: uppercase; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; transition: color .2s, padding .2s, background-color .2s; }
+.nav-item { width: 100%; text-decoration: none; display: grid; grid-template-columns: 36px 1fr 26px 20px; align-items: center; border: 0; border-bottom: 1px solid oklch(0.98 0.018 86 / 24%); color: var(--cream); background: transparent; padding: 15px 0; text-align: left; text-transform: uppercase; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; transition: color .2s, padding .2s, background-color .2s; }
 .nav-item:hover, .nav-item.is-active { color: var(--yellow); padding-left: 8px; background: oklch(1 0 0 / 6%); }
 .nav-number { color: oklch(0.72 0.06 164); font-size: 9px; }
 .nav-icon, .arrow-icon { color: oklch(0.78 0.07 161); }
@@ -146,4 +146,28 @@ button { cursor: pointer; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .waterfall-background { display: none; }
   .site-shell { background: var(--forest-deep) url("/src/assets/serene-forest-waterfall.jpg") center / cover no-repeat; }
+}
+/* ── Education page ───────────────────────────────────────────── */
+.education-page { position: relative; min-height: 100svh; color: oklch(0.96 0.02 150); overflow: hidden; }
+.education-backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.05) brightness(0.92); }
+.education-veil { position: absolute; inset: 0; background: linear-gradient(180deg, oklch(0.16 0.05 160 / 0.66), oklch(0.14 0.045 160 / 0.78)); }
+.education-inner { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; padding: 48px 26px 90px; }
+.education-back { display: inline-flex; align-items: center; gap: 7px; color: oklch(0.9 0.03 150); font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; opacity: .85; transition: opacity .2s; }
+.education-back:hover { opacity: 1; }
+.education-head { margin: 56px 0 42px; text-align: center; animation: rise .6s ease both; }
+.education-eyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: .28em; color: oklch(0.88 0.06 155); }
+.education-head h1 { font-family: var(--serif); font-style: italic; font-weight: 600; font-size: clamp(40px, 7vw, 64px); margin: 14px 0 12px; line-height: 1.05; text-shadow: 0 2px 30px oklch(0.1 0.03 160 / 0.55); }
+.education-head p { font-size: 14px; color: oklch(0.88 0.035 155); margin: 0; }
+.education-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.education-item { display: flex; align-items: center; gap: 18px; padding: 14px 18px 14px 14px; border-radius: 18px; background: oklch(0.18 0.05 160 / 0.55); border: 1px solid oklch(0.9 0.05 155 / 0.18); backdrop-filter: blur(10px); animation: rise .55s ease both; }
+.education-item:nth-child(2) { animation-delay: .07s; }
+.education-item:nth-child(3) { animation-delay: .14s; }
+.education-item:nth-child(4) { animation-delay: .21s; }
+.education-item:nth-child(5) { animation-delay: .28s; }
+.education-thumb { width: 86px; height: 86px; border-radius: 14px; object-fit: cover; flex: none; border: 1px solid oklch(0.9 0.05 155 / 0.22); }
+.education-tag { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: oklch(0.92 0.07 150); margin-bottom: 6px; }
+.education-copy p { margin: 0; font-size: 13.5px; line-height: 1.6; color: oklch(0.88 0.03 152); }
+@media (max-width: 560px) {
+  .education-thumb { width: 68px; height: 68px; }
+  .education-item { gap: 14px; }
 }
