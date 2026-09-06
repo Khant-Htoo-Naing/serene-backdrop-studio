@@ -45,16 +45,27 @@ export const Route = createFileRoute("/education")({
   head: () => ({
     meta: [
       { title: "Education — Khant Htoo Naing" },
-      { name: "description", content: "Language skills, music, academic distinctions and medical studies of Khant Htoo Naing." },
+      {
+        name: "description",
+        content:
+          "Language skills, music, academic distinctions and medical studies of Khant Htoo Naing.",
+      },
       { property: "og:title", content: "Education — Khant Htoo Naing" },
-      { property: "og:description", content: "Language skills, music, academic distinctions and medical studies of Khant Htoo Naing." },
+      {
+        property: "og:description",
+        content:
+          "Language skills, music, academic distinctions and medical studies of Khant Htoo Naing.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap",
+      },
     ],
   }),
   component: EducationPage,
@@ -63,7 +74,11 @@ export const Route = createFileRoute("/education")({
 function EducationPage() {
   return (
     <main className="education-page">
-      <img className="education-backdrop" src={trophies.url} alt="A shelf full of trophies, medals and certificates" />
+      <img
+        className="education-backdrop"
+        src={trophies.url}
+        alt="A shelf full of trophies, medals and certificates"
+      />
       <div className="education-veil" aria-hidden="true" />
 
       <div className="education-inner">
@@ -80,9 +95,18 @@ function EducationPage() {
         <ul className="education-list">
           {items.map(({ icon: Icon, image, title, text }) => (
             <li className="education-item" key={title}>
-              <img className="education-thumb" src={image} alt={title} loading="lazy" width={768} height={768} />
+              <img
+                className="education-thumb"
+                src={image}
+                alt={title}
+                loading="lazy"
+                width={768}
+                height={768}
+              />
               <div className="education-copy">
-                <span className="education-tag"><Icon size={14} /> {title}</span>
+                <span className="education-tag">
+                  <Icon size={14} /> {title}
+                </span>
                 <p>{text}</p>
               </div>
             </li>
