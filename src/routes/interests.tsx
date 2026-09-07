@@ -1,18 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, Compass, Leaf, Sparkles, TrainFront } from "lucide-react";
 
-import waterfallVideo from "@/assets/serene-forest-waterfall-loop.mp4.asset.json";
 import waterfall from "@/assets/serene-forest-waterfall.jpg";
-import centerPortrait from "@/assets/photos/center-portrait.webp";
+import hobbyComposing from "@/assets/hobby-composing.jpg";
+import hobbyInnovation from "@/assets/hobby-innovation.jpg";
 import fullPhoto from "@/assets/photos/full-photo.webp";
-import photoThree from "@/assets/photos/img-20260826-134536.webp";
 
 const interests = [
   {
     icon: Compass,
     title: "Explore new things",
     text: "Following curiosity into new places, ideas, skills, and small discoveries.",
-    poster: centerPortrait,
+    poster: hobbyInnovation,
   },
   {
     icon: TrainFront,
@@ -30,7 +29,7 @@ const interests = [
     icon: Sparkles,
     title: "Breakthrough technology",
     text: "Watching brave ideas become tools that can change how people live and create.",
-    poster: photoThree,
+    poster: hobbyComposing,
   },
 ];
 
@@ -68,16 +67,7 @@ function InterestsPage() {
         <div className="interest-video-grid">
           {interests.map(({ icon: Icon, title, text, poster }, index) => (
             <article className="interest-video-card" key={title}>
-              <video
-                className="interest-video"
-                src={waterfallVideo.url}
-                poster={poster}
-                autoPlay
-                muted
-                loop
-                playsInline
-                aria-hidden="true"
-              />
+              <img className="interest-photo" src={poster} alt="" loading="lazy" />
               <div className="interest-video-shade" />
               <div className="interest-video-copy">
                 <span>

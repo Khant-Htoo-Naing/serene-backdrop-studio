@@ -1225,6 +1225,20 @@ button {
 .interest-video-card:hover .interest-video {
   transform: scale(1.1);
 }
+.interest-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: saturate(0.86) contrast(1.05);
+  transform: scale(1.04);
+  transition: transform 0.5s;
+}
+.interest-video-card:hover .interest-photo {
+  transform: scale(1.1);
+}
 .interest-video-shade {
   position: absolute;
   inset: 0;
