@@ -13,56 +13,56 @@ import {
 } from "lucide-react";
 
 import hobbiesBackground from "@/assets/hobbies-background.png";
-import centerPortrait from "@/assets/photos/center-portrait.webp";
-import fullPhoto from "@/assets/photos/full-photo.webp";
-import photoThree from "@/assets/photos/img-20260826-134536.webp";
-import photoFour from "@/assets/photos/img-20260816-183505.webp";
-import photoFive from "@/assets/photos/img-20260815-093637.webp";
-import photoSix from "@/assets/photos/img-20260731-080053.webp";
-import profile from "@/assets/photos/profile.webp";
+import hobbyChatting from "@/assets/hobby-chatting.jpg";
+import hobbyComposing from "@/assets/hobby-composing.jpg";
+import hobbyDrawing from "@/assets/hobby-drawing.jpg";
+import hobbyGuitar from "@/assets/hobby-guitar.jpg";
+import hobbyInnovation from "@/assets/hobby-innovation.jpg";
+import hobbyListening from "@/assets/hobby-listening.jpg";
+import hobbySinging from "@/assets/hobby-singing.jpg";
 
 const hobbies = [
   {
     icon: Mic2,
     title: "Singing",
     text: "A voice for quiet evenings and small gatherings.",
-    image: centerPortrait,
+    image: hobbySinging,
   },
   {
     icon: Music2,
     title: "Guitar",
     text: "Slow chords, familiar songs, and patient practice.",
-    image: fullPhoto,
+    image: hobbyGuitar,
   },
   {
     icon: Waves,
     title: "Listening to music",
     text: "Finding calm, energy, and memories in a good song.",
-    image: photoThree,
+    image: hobbyListening,
   },
   {
     icon: Brush,
     title: "Drawing",
     text: "Turning small observations into lines, shapes, and color.",
-    image: photoFour,
+    image: hobbyDrawing,
   },
   {
     icon: Pencil,
     title: "Composing",
     text: "Collecting ideas and arranging them into something personal.",
-    image: photoFive,
+    image: hobbyComposing,
   },
   {
     icon: MessageCircle,
     title: "Chatting",
     text: "Meaningful conversations with people I care about.",
-    image: profile,
+    image: hobbyChatting,
   },
   {
     icon: Lightbulb,
     title: "Innovation",
     text: "Exploring better ways to make everyday things work.",
-    image: photoSix,
+    image: hobbyInnovation,
   },
 ];
 
