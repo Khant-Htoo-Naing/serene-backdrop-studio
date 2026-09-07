@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, Compass, Leaf, Sparkles, TrainFront } from "lucide-react";
 
-import waterfall from "@/assets/serene-forest-waterfall.jpg";
 import hobbyComposing from "@/assets/hobby-composing.jpg";
 import hobbyInnovation from "@/assets/hobby-innovation.jpg";
+import natureCreatures from "@/assets/interest-nature-creatures.jpg";
 import fullPhoto from "@/assets/photos/full-photo.webp";
 
 const interests = [
@@ -23,7 +23,7 @@ const interests = [
     icon: Leaf,
     title: "Nature and Creatures",
     text: "Finding wonder in forests, flowing water, animals, and the life around us.",
-    poster: waterfall,
+    poster: natureCreatures,
   },
   {
     icon: Sparkles,
