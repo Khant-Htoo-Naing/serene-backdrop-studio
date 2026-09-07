@@ -2,17 +2,17 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, Instagram, Mail, MessageCircle } from "lucide-react";
 
 const links = [
-  { icon: Mail, label: "Email", value: "hello@example.com", href: "mailto:hello@example.com" },
+  { icon: Mail, label: "TELEGRAM", value: "@KHN21408", href: "mailto:hello@example.com" },
   {
     icon: Instagram,
-    label: "Instagram",
-    value: "Follow the little moments",
+    label: "TIKTOK",
+    value: "@khant.htoo.naing18",
     href: "https://instagram.com",
   },
   {
     icon: MessageCircle,
-    label: "Say hello",
-    value: "Start a conversation",
+    label: "VIBER",
+    value: "09 678496326",
     href: "mailto:hello@example.com?subject=Hello%20Khant",
   },
 ];
