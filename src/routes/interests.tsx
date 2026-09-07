@@ -1,51 +1,55 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowLeft,
-  ArrowUpRight,
-  Compass,
-  Cpu,
-  Heart,
-  Leaf,
-  Palette,
-  Sparkles,
-} from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Compass, Leaf, Sparkles, TrainFront } from "lucide-react";
+
+import waterfallVideo from "@/assets/serene-forest-waterfall-loop.mp4.asset.json";
+import waterfall from "@/assets/serene-forest-waterfall.jpg";
+import centerPortrait from "@/assets/photos/center-portrait.webp";
+import fullPhoto from "@/assets/photos/full-photo.webp";
+import photoThree from "@/assets/photos/img-20260826-134536.webp";
 
 const interests = [
   {
-    icon: Palette,
-    title: "Design",
-    text: "Thoughtful visual details, calm compositions, and spaces that feel human.",
+    icon: Compass,
+    title: "Explore new things",
+    text: "Following curiosity into new places, ideas, skills, and small discoveries.",
+    poster: centerPortrait,
   },
   {
-    icon: Cpu,
-    title: "Technology",
-    text: "Learning how digital tools can make ideas clearer and everyday life easier.",
-  },
-  {
-    icon: Heart,
-    title: "Meaningful relationships",
-    text: "Choosing sincerity, kindness, and presence in the relationships that matter.",
+    icon: TrainFront,
+    title: "Travelling",
+    text: "Collecting the changing light, unfamiliar streets, and stories found on the way.",
+    poster: fullPhoto,
   },
   {
     icon: Leaf,
-    title: "Nature",
-    text: "Quiet green places, changing light, and the restorative rhythm of the outdoors.",
+    title: "Nature and Creatures",
+    text: "Finding wonder in forests, flowing water, animals, and the life around us.",
+    poster: waterfall,
   },
   {
     icon: Sparkles,
-    title: "Personal growth",
-    text: "Becoming more capable without losing softness, curiosity, or wonder.",
+    title: "Breakthrough technology",
+    text: "Watching brave ideas become tools that can change how people live and create.",
+    poster: photoThree,
   },
 ];
 
 export const Route = createFileRoute("/interests")({
-  head: () => ({ meta: [{ title: "Interests — Khant Htoo Naing" }] }),
+  head: () => ({
+    meta: [
+      { title: "Interests — Khant Htoo Naing" },
+      {
+        name: "description",
+        content: "The ideas, journeys, nature and technology that keep Khant Htoo Naing curious.",
+      },
+    ],
+  }),
   component: InterestsPage,
 });
 
 function InterestsPage() {
   return (
-    <main className="interests-page">
+    <main className="interests-page interests-video-page">
       <div className="interests-glow interests-glow-one" />
       <div className="interests-glow interests-glow-two" />
       <div className="interests-inner">
@@ -59,18 +63,30 @@ function InterestsPage() {
             <br />
             <em>my compass.</em>
           </h1>
-          <p>The ideas, people, and places that keep me learning and becoming.</p>
+          <p>The moving ideas, places, living things, and inventions that keep me learning.</p>
         </header>
-        <div className="interests-list">
-          {interests.map(({ icon: Icon, title, text }, index) => (
-            <article className="interest-item" key={title}>
-              <span className="interest-number">0{index + 1}</span>
-              <Icon size={21} />
-              <div>
+        <div className="interest-video-grid">
+          {interests.map(({ icon: Icon, title, text, poster }, index) => (
+            <article className="interest-video-card" key={title}>
+              <video
+                className="interest-video"
+                src={waterfallVideo.url}
+                poster={poster}
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden="true"
+              />
+              <div className="interest-video-shade" />
+              <div className="interest-video-copy">
+                <span>
+                  <Icon size={16} /> 0{index + 1}
+                </span>
                 <h2>{title}</h2>
                 <p>{text}</p>
               </div>
-              <ArrowUpRight size={17} />
+              <ArrowUpRight className="interest-video-arrow" size={18} />
             </article>
           ))}
         </div>
